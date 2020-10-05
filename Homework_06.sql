@@ -17,3 +17,4 @@ select users.gender, count(users.gender) as cnt from likes_posts join users on l
 -- задание №5. Найти 10 пользователей, которые проявляют наименьшую активность в использовании социальной сети.
 
 select concat(users.name,' ', users.surname) as fullname, count(comments.user_id) as activity from comments join users on comments.user_id = users.id group by fullname order by activity asc limit 10;
+...
